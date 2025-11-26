@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <title>KIOTO SECRETO</title>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- aqui se pone el favicon -->
+    <link rel="icon" type="image/png" href="media/img/favicon.png">
+    <!-- tipografía google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <!-- menu navegacion -->
+    <header>
+        <nav id="menu">
+            <ul class="menu-nav">
+                <li>
+                    <a href="index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="templos.html">LOS TEMPLOS</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- cabecera -->
+
+        <div class="fondo">
+            <h1 class="main">KIOTO SECRETO</h1>
+            <h2 class="sub">秘密の京都</h2>
+        </div>
+    </header>
+
+    <!-- introducción -->
+
+    <section id="intro">
+        <h1>CUÁL ES NUESTRA MISIÓN</h1>
+        <h2>- 私たちの使命は何でしょうか -</h2>
+        <div class="intro-cont">
+            <p>Esta web nace con la misión de <span>descubrir y difundir la riqueza espiritual y cultural de Kioto</span> a través de sus templos, santuarios y la tradición del goshuin. Buscamos ofrecer una ruta auténtica para quienes desean <span>conocer la ciudad más allá del turismo</span> habitual: entender sus rituales, respetar sus espacios sagrados y conectar con una práctica centenaria que une arte, historia y espiritualidad. Nuestro objetivo es <span>guiar al visitante en un viaje significativo</span>, mostrando cómo cada templo guarda una historia única y cómo cada sello goshuin se convierte en un recuerdo vivo de ese encuentro íntimo con la cultura japonesa. Queremos <span>que cada paso por Kioto sea una oportunidad para detenerse, contemplar y aprender</span>; que el viajero descubra la serenidad de sus jardines, la fuerza simbólica de su arquitectura y la profundidad de las creencias que han moldeado la vida cotidiana de la ciudad durante siglos.</p>
+            <img class="img-intro" src="media/img/intro.png">
+        </div>
+    </section>
+
+    <!-- goshuin -->
+
+    <section id="goshuin">
+        <h1>EL SIGNIFICADO DEL GOSHUIN</h1>
+        <h2>- 御朱印の意味 -</h2>
+        <p>El goshuin es mucho más que un sello turístico: es un testimonio espiritual. Cada goshuin, escrito a mano con caligrafía tradicional y marcado con sellos rojos ceremoniales, representa la bendición del templo o santuario que lo otorga. Su nombre significa literalmente “sello honorable”, y durante siglos ha funcionado como un registro sagrado de visita, una muestra de respeto y un vínculo entre el viajero y la divinidad del lugar. Recibir un goshuin es participar en una tradición viva que combina arte, devoción y memoria. Cada página del goshuinchō —el cuaderno donde se recopilan— se convierte así en una huella única del camino espiritual recorrido.</p>
+        <div class="gosh-img">
+            <img class="gosh" src="media/img/gosh-1.jpg">
+            <img class="gosh" src="media/img/gosh-2.png">
+            <img class="gosh" src="media/img/gosh-3.jpg">
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h1>¿QUIERES SABER MÁS?</h1>
+        <p>Déjanos tus datos para que podamos conocer mejor tu interés en el turismo de los templos de Kioto y en la tradición del goshuin. Tu información nos ayudará a ofrecer contenido y experiencias más personalizadas, y a seguir compartiendo la riqueza cultural de la antigua capital japonesa. Al enviar tu información, recibirás en casa una serie de regalos exclusivos creados especialmente para los amantes de Kioto y su espiritualidad, para que puedas llevar contigo un recuerdo único de esta experiencia cultural.</p>
+
+        <form id="formulario" onsubmit="return openModal()">
+            <p class="form-text">Nombre<span>*</span></p>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre..." required>
+            <p class="form-text">E-mail<span>*</span></p>
+            <input type="text" id="email" placeholder="Escribe tu e-mail..." required>
+            <p class="form-text">Comentario<span>*</span></p>
+            <input type="text" id="comment" placeholder="Escribe un mensaje..." required>
+            <input class="boton" type="submit">
+        </form>
+    </section>
+
+    <footer id="footer">
+        <section class="footer-cont">
+                <div class="logos">
+                    <img class="logo" src="media/img/kioto-logo.png">
+                    <img class="logo" src="media/img/favicon.png">
+                </div> 
+
+                <div class="iconos">
+                    <p class="media">REDES SOCIALES</p>
+                    <div class="redes-icon">
+                        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
+                    </div>
+
+                </div>
+
+                <div class="contacto">
+                    <p>CONTÁCTANOS</p>
+                    <p>+34 615 378 486</p>
+                    <p>info@kiotosecreto.turismo.es</p>
+                </div>
+            </section>
+    </footer>
+
+
+</body>

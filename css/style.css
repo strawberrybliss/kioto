@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fondo {
+    background-image: url(../media/img/kioto-fondo-3.png);
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fondo-t {
+    background-image: url(../media/img/templo.png);
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main {
+    font-weight: 800;
+    color: rgb(211 197 117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.5em;
+    padding-top: 17%;
+    font-family: "Special Gothic Expanded One";
+    letter-spacing: 0.2em;
+    padding-bottom: 0.2em;
+    mix-blend-mode: hard-light;
+}
+
+.sub {
+    color: rgb(249 201 70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    letter-spacing: 0.3em;
+    mix-blend-mode: hard-light;
+}
+
+.menu-nav {
+    display: flex;
+    position: fixed;
+    top: 1.5em;
+    left: 50%;
+    gap: 5em;
+    transform: translateX(-50%);
+    background: rgba(226, 148, 167, 0.637);
+    backdrop-filter: blur(6.5px);
+    padding: 1em 2em;
+    border-radius: 2.5em;
+    list-style: none;
+    z-index: 1000;
+}
+
+
+
+.menu-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    font-family: "Special Gothic Expanded One";
+}
+
+.menu-nav li:hover a {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+}
+
+#intro {
+    padding-top: 8em;
+    padding-bottom: 7em;
+    /* background-color: #fdc8d1; */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Special Gothic Expanded One";
+    font-size: 3.5em;
+    letter-spacing: 0.15em;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.4em;
+    font-family: "Special Gothic Expanded One";
+    font-size: 2em;
+    letter-spacing: 0.1em;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.4em;
+    font-family: "Special Gothic Expanded One";
+    font-size: 1.7em;
+    letter-spacing: 0.1em;
+}
+
+
+
+.intro-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 2em;
+    gap: 5em;
+}
+
+.intro-cont > p {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 1.1em;
+    max-width: 45%;
+    line-height: 1.4;
+}
+
+.intro-cont span {
+    color: rgb(177, 23, 23);
+}
+
+.img-intro {
+    width: 15%;
+    display: flex;
+    justify-content: left;
+    border-radius: 10%;
+}
+
+#goshuin {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#goshuin > p {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1.1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.gosh-img {
+    display: flex;
+    gap: 1.6em;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 9em;
+}
+
+.gosh-img img {
+    width: 19%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8.5%;
+}
+
+.gosh {
+    transition: transform 0.3s ease;
+}
+
+.gosh:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+#templos {
+    padding-top: 8em;
+}
+
+#intro-templos > p {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1.1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+#t-1 > p {
+
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+#contacto > p {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1.1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding-top: 3em;
+  padding-bottom: 4.5em;
+}
+
+.form-text {
+    font-size: 1.1em;
+    font-family: "Syne";
+    font-weight: bold;
+    display: flex;
+}
+
+input, textarea {
+    display: flex;
+    width: 100%; 
+    height: 0.8em;
+    border-radius: 2em;
+    font-family: "Syne";
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgb(233, 218, 137);
+    border: none;
+    padding: 1.5em;
+    max-width: 50%;
+    box-shadow: 2px 2px 7px rgb(197, 189, 151)
+}
+
+span {
+    color: rgb(128, 24, 24);
+}
+
+.boton {
+    max-width: 15%;
+    font-family: "Syne";
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0;
+    height: 2.5em;
+    background-color: white;
+}
+
+.boton:hover {
+    background-color: rgb(233, 218, 137);
+}
+
+
+#footer {
+    padding-top: 9vh;
+    padding-bottom: 3vh;
+    color: white;
+    background-color: rgb(226, 148, 167);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25em;
+    /* Difuminado superior */
+    /* -webkit-mask-image: linear-gradient(to bottom, transparent, rgb(226, 148, 167) 60%);
+    z-index: 999; */
+}
+
+.footer-cont {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.footer-cont > div {
+    flex: 1;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4em;
+    padding-top: 0.5em;
+    z-index: 1;
+}
+
+.logo {
+    width: 32%;
+    height: auto;
+}
+
+.iconos .media {
+    padding-bottom: 0.5em;
+}
+
+.iconos {
+    text-align: center;
+    cursor: pointer;
+    font-family: "Syne";
+    font-weight: bold;
+}
+
+.redes-icon {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    padding-top: 0.25em;
+    
+}
+
+.contacto {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.9em;
+    cursor: pointer;
+}
+
+.contacto p:first-child {
+    margin-bottom: 0.5em;
+}
+
+
+body {
+    background-color: white;
+}
