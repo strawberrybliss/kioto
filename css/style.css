@@ -92,6 +92,7 @@ h1 {
     font-family: "Special Gothic Expanded One";
     font-size: 3.5em;
     letter-spacing: 0.15em;
+    color: rgb(177, 23, 44);
 }
 
 h2 {
@@ -101,18 +102,8 @@ h2 {
     font-family: "Special Gothic Expanded One";
     font-size: 2em;
     letter-spacing: 0.1em;
+    color: rgb(189, 46, 65);
 }
-
-h3 {
-    display: flex;
-    justify-content: center;
-    padding-top: 0.4em;
-    font-family: "Special Gothic Expanded One";
-    font-size: 1.7em;
-    letter-spacing: 0.1em;
-}
-
-
 
 .intro-cont {
     display: flex;
@@ -190,36 +181,15 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-#templos {
-    padding-top: 8em;
+#contacto {
+    background-color: rgb(255, 228, 234);
+    padding-top: 7em;
 }
 
-#intro-templos > p {
-    font-family: "Syne";
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    padding-top: 2em;
-    padding-bottom: 2.2em;
-    font-size: 1.1em;
-    max-width: 60%;
-    line-height: 1.4;
-    margin: 0 auto;
+.t-form {
+    color: rgb(190, 106, 127);
 }
 
-#t-1 > p {
-
-    font-family: "Syne";
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    padding-top: 2em;
-    padding-bottom: 2.2em;
-    font-size: 1em;
-    max-width: 60%;
-    line-height: 1.4;
-    margin: 0 auto;
-}
 
 #contacto > p {
     font-family: "Syne";
@@ -240,8 +210,8 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  padding-top: 3em;
-  padding-bottom: 4.5em;
+  padding-top: 1.5em;
+  padding-bottom: 8.5em;
 }
 
 .form-text {
@@ -259,15 +229,15 @@ input, textarea {
     font-family: "Syne";
     font-size: 1em;
     font-weight: bold;
-    background-color: rgb(233, 218, 137);
+    background-color: rgb(250, 233, 233);
     border: none;
     padding: 1.5em;
     max-width: 50%;
-    box-shadow: 2px 2px 7px rgb(197, 189, 151)
+    box-shadow: 2px 2px 7px rgb(184, 131, 144);
 }
 
 span {
-    color: rgb(128, 24, 24);
+    color: rgb(177, 23, 23);
 }
 
 .boton {
@@ -277,11 +247,88 @@ span {
     font-weight: bold;
     padding: 0;
     height: 2.5em;
-    background-color: white;
+    color: white;
+    background-color: rgb(231, 166, 182);
+    cursor: pointer;
+}
+
+#enviar {
+    padding-top: 2.2em;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .boton:hover {
-    background-color: rgb(233, 218, 137);
+    background-color: rgb(190, 106, 127);
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(226, 148, 167, 0.397);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: rgb(194, 120, 138);
+  padding: 2em 3em;
+  border-radius: 3em;
+  text-align: center;
+  width: 100%;
+  height: 65vh;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(31, 7, 7, 0.3);
+  position: relative;
+  animation: fadeInUp 0.4s ease;
+}
+
+.modal-content h2 {
+  color: white;
+  margin-bottom: 2em;
+  font-family: "Special Gothic Expanded One";
+  font-size: 2.8em;
+  padding-top: 2em;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+}
+
+.modal-content p {
+  color: white;
+  padding: 0.3em;
+  font-size: 1.3em;
+  font-weight: lighter;
+  font-family: "Syne";
+}
+
+.close {
+  position: absolute;
+  top: 0.6em;
+  right: 0.75em;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* animacion ventana modal */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -295,9 +342,6 @@ span {
     align-items: center;
     justify-content: center;
     font-size: 1.25em;
-    /* Difuminado superior */
-    /* -webkit-mask-image: linear-gradient(to bottom, transparent, rgb(226, 148, 167) 60%);
-    z-index: 999; */
 }
 
 .footer-cont {
@@ -360,6 +404,104 @@ span {
     margin-bottom: 0.5em;
 }
 
+#templos {
+    padding-top: 8em;
+}
+
+#intro-templos > p {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1.1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+#t-1 > p {
+
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.maravillas {
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        #b11919,
+        #c44156,
+        #f58360,
+        #b11919
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    animation: moverColores 3s linear infinite;
+}
+
+@keyframes moverColores {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+#ubi {
+    padding-top: 8em;
+}
+
+#ubi > p {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    max-width: 100vh;
+    height: 57vh;
+    border: 0;
+}
+
+#grafico {
+    padding: 8em;
+}
+
+#grafico > p {
+    font-family: "Syne";
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2.2em;
+    font-size: 1em;
+    max-width: 60%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
 
 body {
     background-color: white;

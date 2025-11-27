@@ -68,8 +68,9 @@
     </section>
 
     <section id="contacto">
-        <h1>¿QUIERES SABER MÁS?</h1>
-        <p>Déjanos tus datos para que podamos conocer mejor tu interés en el turismo de los templos de Kioto y en la tradición del goshuin. Tu información nos ayudará a ofrecer contenido y experiencias más personalizadas, y a seguir compartiendo la riqueza cultural de la antigua capital japonesa. Al enviar tu información, recibirás en casa una serie de regalos exclusivos creados especialmente para los amantes de Kioto y su espiritualidad, para que puedas llevar contigo un recuerdo único de esta experiencia cultural.</p>
+        <h1><span class="t-form">¿QUIERES SABER MÁS?</span></h1>
+        <h2><span class="t-form">- もっと詳しく知りたいですか -</span></h2>
+        <p>Déjanos tus datos para que podamos conocer mejor tu interés en el turismo de los templos de Kioto y en la tradición del goshuin. Tu información nos ayudará a ofrecer contenido y experiencias más personalizadas, y a seguir compartiendo la riqueza cultural de la antigua capital japonesa. Al enviar tu información, recibirás por correo un código para canjear regalos exclusivos creados especialmente para los amantes de Kioto y su espiritualidad, para que puedas llevar contigo un recuerdo único de esta experiencia cultural.</p>
 
         <form id="formulario" onsubmit="return openModal()">
             <p class="form-text">Nombre<span>*</span></p>
@@ -78,15 +79,33 @@
             <input type="text" id="email" placeholder="Escribe tu e-mail..." required>
             <p class="form-text">Comentario<span>*</span></p>
             <input type="text" id="comment" placeholder="Escribe un mensaje..." required>
-            <input class="boton" type="submit">
+            <div id="enviar">
+                <input class="boton" type="submit">
+            </div>
         </form>
+
+        <!-- ventana modal -->
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span onclick="closeModal()" id="close" class="close">&times;</span>
+                <h2>ENVÍO CORRECTO</h2>
+                <p>Gracias, <strong id="n"></strong></p>
+                <p>Hemos recibido tu mensaje: <br><strong id="m"></strong></p>
+                <p>Te contactaremos pronto a <br><strong id="c"></strong> para brindarte más información acerca del turismo en Kioto</p>
+            </div>
+        </div>
+
+
+
+
     </section>
 
     <footer id="footer">
         <section class="footer-cont">
                 <div class="logos">
                     <img class="logo" src="media/img/kioto-logo.png">
-                    <img class="logo" src="media/img/favicon.png">
+                    <img class="logo" src="media/img/kioto-blanco.png">
                 </div> 
 
                 <div class="iconos">
