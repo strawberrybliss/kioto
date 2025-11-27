@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- aqui se pone el favicon -->
@@ -52,9 +53,56 @@
             <p>Descubre la riqueza histórica y espiritual de Kioto a través de sus templos más emblemáticos. Cada uno refleja siglos de tradición y ofrece un espacio donde arquitectura, arte y naturaleza se combinan para crear una experiencia única. Pasear por estos lugares es sumergirse en la serenidad de jardines cuidadosamente diseñados, senderos de piedra y rincones que invitan a la contemplación y al recogimiento. Además, te permitirán acercarse a la cultura del goshuin, los sellos que registran tu visita y se convierten en recuerdos especiales de tu recorrido. Cada visita es una oportunidad para conectar con la historia, la espiritualidad y la belleza de la antigua capital japonesa, explorando espacios que conservan el espíritu y la esencia de Kioto.</p>
         </div>
 
-        <div id="t-1">
+        <div class="t-1">
             <h2>KIYOMIZU-DERA / 清水寺</h2>
             <p>Probablemente el templo más famoso de Kioto, Kiyomizu-dera es conocido por su impresionante terraza de madera que sobresale del acantilado, ofreciendo vistas panorámicas de la ciudad y de los cerezos en flor durante la primavera. Además, el templo cuenta con un goshuin oficial que los visitantes pueden obtener en su estación dentro del complejo, lo que permite llevar un recuerdo especial de la visita y sumergirse en la tradición de la cultura japonesa.</p>
+            <div id="carrusel">
+                <div class="diapos">
+                    <img src="media/img/templo-1-3.jpg">
+                    <img src="media/img/templo-1-2.jpg">
+                    <img src="media/img/templo-1-1.webp">
+                    <img src="media/img/templo-1-4.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="t-1">
+            <h2>GINKAKU-JI / 銀閣寺</h2>
+            <p>Probablemente el templo más famoso de Kioto, Kiyomizu-dera es conocido por su impresionante terraza de madera que sobresale del acantilado, ofreciendo vistas panorámicas de la ciudad y de los cerezos en flor durante la primavera. Además, el templo cuenta con un goshuin oficial que los visitantes pueden obtener en su estación dentro del complejo, lo que permite llevar un recuerdo especial de la visita y sumergirse en la tradición de la cultura japonesa.</p>
+            <div id="carrusel">
+                <div class="diapos">
+                    <img src="media/img/templo-2-4.jpg">
+                    <img src="media/img/templo-2-2.avif">
+                    <img src="media/img/templo-2-3.jpg">
+                    <img src="media/img/templo-2-1.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="t-1">
+            <h2>KINKAKU-JI / 金閣寺</h2>
+            <p>Probablemente el templo más famoso de Kioto, Kiyomizu-dera es conocido por su impresionante terraza de madera que sobresale del acantilado, ofreciendo vistas panorámicas de la ciudad y de los cerezos en flor durante la primavera. Además, el templo cuenta con un goshuin oficial que los visitantes pueden obtener en su estación dentro del complejo, lo que permite llevar un recuerdo especial de la visita y sumergirse en la tradición de la cultura japonesa.</p>
+            <div id="carrusel">
+                <div class="diapos">
+                    <img src="media/img/templo-3-1.png">
+                    <img src="media/img/templo-3-2.jpg">
+                    <img src="media/img/templo-3-3.jpg">
+                    <img src="media/img/templo-3-4.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="t-1">
+            <h2>FUSHIMI INARI-TAISHA / 伏見稲荷大社</h2>
+            <p>Probablemente el templo más famoso de Kioto, Kiyomizu-dera es conocido por su impresionante terraza de madera que sobresale del acantilado, ofreciendo vistas panorámicas de la ciudad y de los cerezos en flor durante la primavera. Además, el templo cuenta con un goshuin oficial que los visitantes pueden obtener en su estación dentro del complejo, lo que permite llevar un recuerdo especial de la visita y sumergirse en la tradición de la cultura japonesa.</p>
+            <div id="carrusel">
+                <div class="diapos">
+                    <img src="media/img/templo-4-1.webp">
+                    <img src="media/img/templo-4-2.jpg">
+                    <img src="media/img/templo-4-3.jpg">
+                    <img src="media/img/templo-4-1.jpg">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -71,6 +119,9 @@
         <h1>MÁS INFORMACIÓN</h1>
         <h2>- 詳細情報 -</h2>
         <p>El siguiente gráfico muestra una comparación del número de visitantes anuales en cuatro de los templos más importantes de Kioto. Gracias a estos datos es posible visualizar de forma rápida cuáles son los más concurridos y cómo se distribuye el interés turístico entre ellos. Esta información ayuda a comprender la popularidad de cada templo y puede servir de guía a la hora de planificar una visita según el tipo de experiencia que busques.</p>
+        <div>
+            <canvas id="barras"></canvas>
+        </div>
 
     </section>
 
