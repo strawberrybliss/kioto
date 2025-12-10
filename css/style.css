@@ -78,6 +78,14 @@
     text-decoration-thickness: 0.2em;
 }
 
+.menu-responsive {
+    display: none;
+}
+
+.menu-barras {
+    display: none;
+}
+
 #intro {
     padding-top: 8em;
     padding-bottom: 7em;
@@ -131,7 +139,7 @@ h2 {
 }
 
 .img-intro {
-    width: 22%;
+    width: 25.5%;
     display: flex;
     justify-content: left;
     border-radius: 10%;
@@ -468,9 +476,9 @@ input::placeholder, textarea::placeholder {
     100% { background-position: 200% 50%; }
 }
 
-#carrusel {
-    width: 55%;
-    height: 55vh;
+.carrusel {
+    width: 58%;
+    height: 65vh;
     position: relative;
     border-radius: 2em;
     overflow: hidden;
@@ -480,15 +488,15 @@ input::placeholder, textarea::placeholder {
     align-items: center;
 }
 
-#carrusel .diapos {
+.carrusel .diapos {
     display: flex;
     width: 400%;
     transition: transform 0.4s ease;
 }
 
-#carrusel img {
+.carrusel img {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     object-fit: cover;
 }
 
@@ -503,7 +511,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .t-rosa {
-    color: rgb(190, 106, 127)
+    color: rgb(190, 106, 127);
 }
 
 #ubi > p {
@@ -538,7 +546,7 @@ input::placeholder, textarea::placeholder {
 
 #grafico {
     background-color: rgb(255, 228, 234);
-    padding-top: 7em;
+    padding-top: 3em;
 }
 
 #grafico > p {
@@ -554,6 +562,325 @@ input::placeholder, textarea::placeholder {
     margin: 0 auto;
 }
 
+#grafico > div {
+    width: 100%;
+    max-width: 38em;
+    margin: auto;
+}
+
+
 body {
     background-color: white;
+}
+
+/* media queries para tablet */
+
+@media (min-width: 430px) and (max-width: 1250px) {
+
+    .main {
+        font-size: 5.25em;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 42%;
+    }
+
+    .menu-barras {
+        display: block;
+        position: fixed;
+        cursor: pointer;
+        top: 1em;
+        left: 1em;
+        z-index: 2000;
+        font-size: 2.5em;
+        margin-top: 0.75em;
+        color: rgb(226, 148, 167);
+    }
+
+    .menu-responsive {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(226, 148, 167);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1900;
+    }
+
+    .menu-responsive ul {
+        list-style: none;
+    }
+
+    .menu-responsive li {
+        margin: 3em;
+    }
+
+    .menu-responsive a {
+        text-decoration: none;
+        font-size: 2.5em;
+        color: white;
+        transition: color 0.2s ease;
+        font-family: "Special Gothic Expanded One"
+    }
+
+    .menu-responsive a:hover {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+        text-decoration-thickness: 0.2em;
+    }
+
+    .menu-responsive.activo {
+        transform: translateX(0);
+    }
+
+    #cerrar-menu {
+        position: absolute;
+        top: 1.2em;
+        right: 1.2em;
+        font-size: 3.5em;
+        cursor: pointer;
+        display: block;
+        color: white;
+    }
+
+    .menu-nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2.65em;
+        text-align: center;
+        max-width: 14em;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        padding-bottom: 0.8em;
+    }
+
+    #intro {
+        padding-bottom: 4em;
+    }
+
+    .intro-cont {
+        flex-direction: column-reverse;
+        gap: 1em;
+        padding-top: 1em;
+    }
+
+    .intro-cont > p {
+        text-align: justify;
+        max-width: 35.7em;
+        font-size: 1.05em;
+    }
+
+    .img-intro {
+        width: 50%;
+    }
+
+    #goshuin {
+        padding-bottom: 3em;
+    }
+
+    #goshuin > p {
+        max-width: 34em;
+        font-size: 1.05em;
+    }
+
+    #contacto > p {
+        font-size: 1.05em;
+        max-width: 34.5em;
+    }
+    
+    .footer-cont {
+        flex-direction: column;
+        padding-bottom: 2em;
+    }
+
+    .logo {
+        width: 43.5%;
+    }
+
+    .iconos, .contacto {
+        font-size: 1.7em;
+        padding-top: 0.8em;
+    }
+
+    #intro-templos > p {
+        max-width: 33em;
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 33vh;
+        object-fit: cover;
+    }
+    
+    .carrusel {
+        height: 30vh;
+    }
+
+    .mapa iframe {
+        height: 50vh;
+        width: 70%;
+    }
+
+    #ubi > p {
+        max-width: 32em;
+    }
+
+    #grafico > p {
+        max-width: 33em;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .main {
+        font-size: 3em;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 75%;
+    }
+
+    .fondo {
+        background-size: cover;         
+        background-position: center;
+        background-attachment: scroll;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .menu-barras {
+        top: 1em;
+        left: 1em;
+        font-size: 1.5em;
+    }
+
+    .menu-responsive {
+        position: fixed;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu-responsive li {
+        margin: 2em;
+    }
+
+    .menu-responsive a {
+        font-size: 2em;
+    }
+
+    #cerrar-menu {
+        top: 1em;
+        right: 1em;
+        font-size: 1.7em;
+    }
+
+    .menu-nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        text-align: center;
+        max-width: 10em;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1em;
+        padding-bottom: 0.8em;
+    }
+
+    .img-intro {
+        width: 60%;
+    }
+
+    .intro-cont > p {
+        max-width: 16.5em;
+    }
+
+    #goshuin > p {
+        max-width: 17em;
+        text-align: justify;
+    }
+
+    .gosh-img {
+        flex-direction: column;
+        width: 100vh;
+    }
+
+    .gosh {
+        width: 100%;
+    }
+
+    #contacto > p {
+        max-width: 17em;
+    }
+
+    .boton {
+        max-width: 40%;
+        height: 2em;
+    }
+
+    .footer-cont {
+        flex-direction: column;
+        padding-bottom: 2em;
+    }
+
+    .logo {
+        width: 38%;
+    }
+
+    .iconos, .contacto {
+        font-size: 1em;
+        padding-top: 0.8em;
+    }
+
+    #intro-templos > p {
+        max-width: 16em;
+        text-align: justify;
+    }
+
+    .t-1 > p {
+        max-width: 17.5em;
+        text-align: justify;
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 43vh;
+        object-fit: cover;
+    }
+    
+    .carrusel {
+        height: 35vh;
+        width: 70%;
+    }
+
+    #ubi > p {
+        max-width: 17em;
+        text-align: justify;
+    }
+
+    #grafico > p {
+        max-width: 20em;
+    }
+
+
+
+
+
+
+
+
+
 }

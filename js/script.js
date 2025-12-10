@@ -26,17 +26,33 @@ function closeModal() {
   return false;
 }
 
+
+// menu responsive
+
+function openMenu() {
+  console.log("Función openMenu");
+  document.getElementById("menu-responsive").classList.add("activo");
+  document.getElementById("abrir").style.display = "none";
+}
+
+function closeMenu() {
+  console.log("Función closeMenu");
+  document.getElementById("menu-responsive").classList.remove("activo");
+  document.getElementById("abrir").style.display = "block";
+}
+
+
 // gráfico de barras
 
 function cargaGraficoBarras() {
     // Datos para generar el gráfico, hay que definir las etiquetas y
     // los datasets. Hay que definir un color para cada dataset
     var datos = {
-        labels: ["Kinkaku-ji", "Fushimi Inari-taisha", "Ginkaku-ji", "Kiyomizu-dera"],
+        labels: ["KIYOMIZU-DERA", "GINKAKU-JI", "KINKAKU-JI", "FUSHIMI INARI-TAISHA"],
         datasets: [{
-            label: "Templo más visitado anualmente",
-            backgroundColor: "#f2a6abff",
-            data: [44.1, 21.4, 16.7, 6.2]
+            label: "Templo más visitado en 2025",
+            backgroundColor: "rgb(190, 106, 127)",
+            data: [5.0, 3.0, 6.0, 4.5]
         }],
     };
 
@@ -59,10 +75,10 @@ function cargaGraficoBarras() {
                 },
                 y: {
                     min: 0,
-                    max: 50,
+                    max: 10,
                     title: {
                         display: true,
-                        text: "Porcentaje de visitantes en 2025 (%)"
+                        text: "Número de visitantes (millones)"
                     },
                     border: {
                         color: "black",
@@ -79,4 +95,46 @@ function cargaGraficoBarras() {
     new Chart(grafico, config);
 }
 
-// carrusel imagenes
+$(document).ready(function () {
+    cargaGraficoBarras();
+});
+
+// carrusel
+
+$(document).ready(function () {
+    $('.carrusel').each(function () {
+        var $carrusel = $(this);
+        var $diapos = $carrusel.find('.diapos');
+        var $imagenes = $diapos.children();
+        var total = $imagenes.length;
+        var ancho = 100; // cada imagen ocupa 100% del contenedor
+
+        // Duplicar las imágenes para transición continua
+        $diapos.append($imagenes.clone());
+        var index = 0;
+
+        function siguiente() {
+            index++;
+            $diapos.css('transition', 'transform 0.5s ease');
+            $diapos.css('transform', 'translateX(-' + (index * ancho) + '%)');
+
+            // Cuando llega al final del original, reinicia rápido
+            if (index === total) {
+                setTimeout(function () {
+                    $diapos.css('transition', 'none'); // quitar transición
+                    $diapos.css('transform', 'translateX(0)');
+                    index = 0;
+                }, 500); // mismo tiempo que la transición
+            }
+        }
+
+        // Cambio automático cada 3 segundos
+        var intervalo = setInterval(siguiente, 3000);
+
+        // Detener al pasar el mouse
+        $carrusel.hover(
+            function () { clearInterval(intervalo); },
+            function () { intervalo = setInterval(siguiente, 3000); }
+        );
+    });
+});
