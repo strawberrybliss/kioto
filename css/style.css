@@ -496,7 +496,7 @@ input::placeholder, textarea::placeholder {
 
 .carrusel img {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     object-fit: cover;
 }
 
@@ -566,6 +566,14 @@ input::placeholder, textarea::placeholder {
     width: 100%;
     max-width: 38em;
     margin: auto;
+}
+
+.br-movil {
+    display: none;
+}
+
+.brt-movil {
+    display: none;
 }
 
 
@@ -766,8 +774,10 @@ body {
 
     .menu-responsive {
         position: fixed;
-        justify-content: center;
-        text-align: center;
+        overflow-y: auto;
+        z-index: 9999;
+        top: 0;
+        left: 0;
     }
 
     .menu-responsive li {
@@ -815,11 +825,17 @@ body {
 
     .gosh-img {
         flex-direction: column;
-        width: 100vh;
+        width: 100%;
+    }
+
+    .gosh-img img {
+        width: 60%;
+        max-width: 90vh;
     }
 
     .gosh {
-        width: 100%;
+        width: 90vh;
+        max-width: 100%;
     }
 
     #contacto > p {
@@ -874,13 +890,4 @@ body {
     #grafico > p {
         max-width: 20em;
     }
-
-
-
-
-
-
-
-
-
 }

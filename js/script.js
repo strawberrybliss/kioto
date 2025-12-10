@@ -101,40 +101,32 @@ $(document).ready(function () {
 
 // carrusel
 
-$(document).ready(function () {
-    $('.carrusel').each(function () {
-        var $carrusel = $(this);
-        var $diapos = $carrusel.find('.diapos');
-        var $imagenes = $diapos.children();
-        var total = $imagenes.length;
-        var ancho = 100; // cada imagen ocupa 100% del contenedor
+function inicioCarrusel() {
+    $(".carrusel").each(function () {
+        var carrusel = $(this);
+        var images = carrusel.find(".diapos img");
+        var current = 0;
+        var total = images.length;
 
-        // Duplicar las imágenes para transición continua
-        $diapos.append($imagenes.clone());
-        var index = 0;
+        /**
+         * Hace que se muestre la primera imagen de las 4.
+         * @param index
+         */
 
-        function siguiente() {
-            index++;
-            $diapos.css('transition', 'transform 0.5s ease');
-            $diapos.css('transform', 'translateX(-' + (index * ancho) + '%)');
-
-            // Cuando llega al final del original, reinicia rápido
-            if (index === total) {
-                setTimeout(function () {
-                    $diapos.css('transition', 'none'); // quitar transición
-                    $diapos.css('transform', 'translateX(0)');
-                    index = 0;
-                }, 500); // mismo tiempo que la transición
-            }
+        function showImage(index) {
+            images.hide();
+            images.eq(index).show();
         }
 
-        // Cambio automático cada 3 segundos
-        var intervalo = setInterval(siguiente, 3000);
+        showImage(current);
 
-        // Detener al pasar el mouse
-        $carrusel.hover(
-            function () { clearInterval(intervalo); },
-            function () { intervalo = setInterval(siguiente, 3000); }
-        );
+        setInterval(function () {
+            current = (current + 1) % total;
+            showImage(current);
+        }, 4000)
     });
+}
+
+$(document).ready(function () {
+    inicioCarrusel()
 });
