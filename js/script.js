@@ -63,6 +63,8 @@ function cargaGraficoBarras() {
         type: "bar",
         data: datos,
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 x: {
                     border: {

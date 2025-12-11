@@ -10,7 +10,7 @@
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-    height: 100vh;
+    height: 101vh;
     overflow: hidden;
 }
 
@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
     font-size: 5.5em;
-    padding-top: 19%;
+    padding-top: 15.5%;
     font-family: "Special Gothic Expanded One";
     letter-spacing: 0.2em;
     padding-bottom: 0.2em;
@@ -98,7 +98,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-family: "Special Gothic Expanded One";
-    font-size: 3.5em;
+    font-size: 3.15em;
     letter-spacing: 0.15em;
     color: rgb(177, 23, 44);
 }
@@ -160,7 +160,7 @@ h2 {
     padding-top: 2em;
     padding-bottom: 2.2em;
     font-size: 1.1em;
-    max-width: 60%;
+    max-width: 62%;
     line-height: 1.4;
     margin: 0 auto;
 }
@@ -572,10 +572,6 @@ input::placeholder, textarea::placeholder {
     display: none;
 }
 
-.brt-movil {
-    display: none;
-}
-
 
 body {
     background-color: white;
@@ -583,13 +579,13 @@ body {
 
 /* media queries para tablet */
 
-@media (min-width: 430px) and (max-width: 1250px) {
+@media (min-width: 430px) and (max-width: 1200px) {
 
     .main {
         font-size: 5.25em;
         flex-direction: column;
         text-align: center;
-        padding-top: 42%;
+        padding-top: 25%;
     }
 
     .menu-barras {
@@ -799,7 +795,7 @@ body {
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
         text-align: center;
         max-width: 10em;
         margin: 0 auto;
@@ -820,7 +816,7 @@ body {
 
     #goshuin > p {
         max-width: 17em;
-        text-align: justify;
+        text-align: left;
     }
 
     .gosh-img {
@@ -863,12 +859,12 @@ body {
 
     #intro-templos > p {
         max-width: 16em;
-        text-align: justify;
+        text-align: left;
     }
 
     .t-1 > p {
         max-width: 17.5em;
-        text-align: justify;
+        text-align: left;
     }
 
     .carrusel img {
@@ -882,12 +878,25 @@ body {
         width: 70%;
     }
 
+    .br-movil {
+        display: flex;
+    }
+
     #ubi > p {
         max-width: 17em;
-        text-align: justify;
+        text-align: left;
     }
 
     #grafico > p {
-        max-width: 20em;
+        text-align: left;
+    }
+
+    #grafico > div {
+        width: 100%;
+        height: 35vh;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 }
